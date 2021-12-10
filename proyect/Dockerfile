@@ -1,21 +1,15 @@
-FROM node:10-slim
+FROM node:12
 
-RUN npm -g 
+WORKDIR /app
 
-USER node
-
-RUN mkdir -p /home/node/app
-
-WORKDIR /home/node/app
-
-COPY --chown=node package*.json ./
+COPY package*.json ./
 
 RUN npm install
 
-COPY --chown=node . .
+COPY . .
 
-ENV HOST=0.0.0.0 PORT=4000
+ENV HOST=0.0.0.0 PORT=3000
 
 EXPOSE ${PORT}
 
-CMD [ "node", "app" ]
+CMD ["npm", "start" ]
