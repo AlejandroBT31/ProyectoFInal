@@ -7,6 +7,8 @@ var indexRouter = require('./routes/index');
 var tasksRouter = require('./routes/tasks');
 var authRouter = require('./routes/auth');
 var paymentRouter = require('./routes/payment');
+var operationsRouter = require('./routes/operations');
+var shipmentRouter = require('./routes/shipment');;
 
 var app = express();
 
@@ -22,21 +24,25 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/auth', authRouter);
 app.use('/', indexRouter);
 app.use('/tasks', tasksRouter);
-//app.use('/payment', paymentRouter);
-
+app.use('/payment', paymentRouter);
+app.use('/operations', operationsRouter);
+app.use('/shipment', shipmentRouter);
 
 module.exports = app;
 
 //docker
 
 const http = require('http');
-
 const port = 5000;
 
 const server = http.createServer((req, res) => {
   res.statusCode = 200;
   res.setHeader('Content-Type', 'text/plain');
   res.end('Hola Mundo - Docker');
+});
+
+server.listen(port,() => {
+  console.log(`El servidor se está ejecutando en http://localhost:${port}/`);
 });
 
 //Sentry
