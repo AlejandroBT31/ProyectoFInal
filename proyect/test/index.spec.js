@@ -141,6 +141,6 @@ describe('express_authentication', () => {
                 });
                 done();
             })
-
     });
 });
+
