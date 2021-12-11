@@ -13,7 +13,6 @@ module.exports = {
 
     applyDiscount: function (req, res) {
         //debera de restar una cantidad a cada precio en payment-generated.txt
-        //res.json({ message: ""});
         let price = faker.commerce.price(); //creacion de precio
         console.log(price);
 
@@ -36,5 +35,6 @@ module.exports = {
             {name: "BLACKFRIDAY"},
             {name: "PRIMEDAY"},
         ]);
+        res.status(201).send();
     }
 };
