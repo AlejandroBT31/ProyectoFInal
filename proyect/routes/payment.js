@@ -10,9 +10,4 @@ router.get('/create', paymentController.create);
 
 router.use(middleware);
 
-// router
-//     .get('/promos', paymentController.getPromos);
-//     .get('/applyDiscount', paymentController.applyDiscount);
-//     .get('/create', paymentController.create);
-
 module.exports = router;

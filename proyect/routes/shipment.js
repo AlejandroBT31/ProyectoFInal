@@ -9,8 +9,4 @@ router.get('/changeStatus', shipmentController.changeStatus);
 
 router.use(middleware);
 
-// router
-//     .post('/', tasksController.create)
-//     .get('/', tasksController.getAll);
-
 module.exports = router;
