@@ -2,13 +2,15 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+var StatsD = require('hot-shots');
+var dogstatsd = new StatsD();
 
 var indexRouter = require('./routes/index');
 var tasksRouter = require('./routes/tasks');
 var authRouter = require('./routes/auth');
 var paymentRouter = require('./routes/payment');
 var operationsRouter = require('./routes/operations');
-var shipmentRouter = require('./routes/shipment');;
+var shipmentRouter = require('./routes/shipment');
 
 var app = express();
 
@@ -24,11 +26,16 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/auth', authRouter);
 app.use('/', indexRouter);
 app.use('/tasks', tasksRouter);
-app.use('/payment', paymentRouter);
 app.use('/operations', operationsRouter);
+app.use('/payment', paymentRouter);
 app.use('/shipment', shipmentRouter);
 
+
 module.exports = app;
+
+// Increment a counter.
+dogstatsd.increment('page.views');
+
 
 //docker
 

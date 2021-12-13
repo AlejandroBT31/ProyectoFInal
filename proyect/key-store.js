@@ -7,9 +7,8 @@ const LINE_ENDING = require('os').EOL;
 
 module.exports = function (req, res) {  
     const apiKey = shortid.generate();
-    console.log(apiKey);
     const fd = fs.openSync(VALID_KEYS_PATH, 'a');
     fs.appendFileSync(fd, apiKey + LINE_ENDING, 'utf8');
-    return res.status(201).send({ apiKey });
+    return res.status(201).send({apiKey});
 };
 
