@@ -8,11 +8,10 @@ module.exports = {
         res.status(201).send();
     },
     changeStatus: function (req, res) {
-        const status = Object.assign(createShipment);
         //Debera de retornar una dirección random
         // codigo de respuesta 201
         // data la direcciòn random
-        res.json({addres: faker.address.streetAddress()+', '+faker.address.cityName() +', '+faker.address.country});
+        res.json({addres: faker.address.streetAddress()+', '+faker.address.cityName() +', '+faker.address.country()});
         res.status(201).send();
     },
 };
