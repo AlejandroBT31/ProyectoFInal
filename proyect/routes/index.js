@@ -1,13 +1,9 @@
 var express = require('express');
 var router = express.Router();
 
-var StatsD = require('hot-shots');
-var dogstatsd = new StatsD();
-
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  dogstatsd.increment('page.views');
-  res.send('<p>HTML Data</p>');
+  res.send('<h1>Hola Mundo</h1>');
 });
 
 module.exports = router;

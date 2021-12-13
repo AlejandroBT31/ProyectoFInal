@@ -3,7 +3,7 @@ var router = express.Router();
 var paymentController = require('../controllers/payment.controller');
 var middleware = require('../middleware');
 
-//integracion del controller ?
+
 router.get('/promos', paymentController.getPromos);
 router.get('/applyDiscount', paymentController.applyDiscount);
 router.get('/create', paymentController.create);
