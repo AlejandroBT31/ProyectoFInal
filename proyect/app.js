@@ -45,11 +45,11 @@ const port = 5000;
 const server = http.createServer((req, res) => {
   res.statusCode = 200;
   res.setHeader('Content-Type', 'text/plain');
-  res.end('Hola Mundo - Docker');
+  res.end('Hola Mundo desde Docker');
 });
 
 server.listen(port,() => {
-  console.log(`El servidor se está ejecutando en http://localhost:${port}/`);
+  console.log(`El servidor Docker se está ejecutando en http://localhost:${port}/`);
 });
 
 //Sentry
