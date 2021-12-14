@@ -1,52 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuites name="Mocha Tests" time="5.0980" tests="16" failures="3">
-  <testsuite name="Root Suite" timestamp="2021-12-13T02:21:33" tests="0" time="0.0000" failures="0">
+<testsuites name="Mocha Tests" time="2.1600" tests="16" failures="0">
+  <testsuite name="Root Suite" timestamp="2021-12-14T05:23:33" tests="0" time="0.0000" failures="0">
   </testsuite>
-  <testsuite name="express_authentication" timestamp="2021-12-13T02:21:33" tests="7" file="C:\Users\Dell\Diplomado\ProyectoFinal\proyect\test\index.spec.js" time="4.5260" failures="2">
-    <testcase name="express_authentication Should generate an API key and add it to file" time="0.5120" classname="Should generate an API key and add it to file">
+  <testsuite name="express_authentication" timestamp="2021-12-14T05:23:33" tests="7" file="C:\Users\Dell\Diplomado\ProyectoFinal\proyect\test\index.spec.js" time="1.0890" failures="0">
+    <testcase name="express_authentication Should generate an API key and add it to file" time="0.5130" classname="Should generate an API key and add it to file">
     </testcase>
-    <testcase name="express_authentication &quot;before each&quot; hook for &quot;Should generate 5 unique API Keys&quot;" time="2.0020" classname="&quot;before each&quot; hook for &quot;Should generate 5 unique API Keys&quot;">
-      <failure message="Timeout of 2000ms exceeded. For async tests and hooks, ensure &quot;done()&quot; is called; if returning a Promise, ensure it resolves. (C:\Users\Dell\Diplomado\ProyectoFinal\proyect\test\index.spec.js)" type="Error"><![CDATA[Error: Timeout of 2000ms exceeded. For async tests and hooks, ensure "done()" is called; if returning a Promise, ensure it resolves. (C:\Users\Dell\Diplomado\ProyectoFinal\proyect\test\index.spec.js)
-    at listOnTimeout (internal/timers.js:557:17)
-    at processTimers (internal/timers.js:500:7)]]></failure>
+    <testcase name="express_authentication Should generate 5 unique API Keys" time="0.5150" classname="Should generate 5 unique API Keys">
     </testcase>
-    <testcase name="express_authentication &quot;after each&quot; hook for &quot;Should generate 5 unique API Keys&quot;" time="2.0120" classname="&quot;after each&quot; hook for &quot;Should generate 5 unique API Keys&quot;">
-      <failure message="Timeout of 2000ms exceeded. For async tests and hooks, ensure &quot;done()&quot; is called; if returning a Promise, ensure it resolves. (C:\Users\Dell\Diplomado\ProyectoFinal\proyect\test\index.spec.js)" type="Error"><![CDATA[Error: Timeout of 2000ms exceeded. For async tests and hooks, ensure "done()" is called; if returning a Promise, ensure it resolves. (C:\Users\Dell\Diplomado\ProyectoFinal\proyect\test\index.spec.js)
-    at listOnTimeout (internal/timers.js:557:17)
-    at processTimers (internal/timers.js:500:7)]]></failure>
+    <testcase name="express_authentication Should return the API Key back in response" time="0.0240" classname="Should return the API Key back in response">
     </testcase>
-  </testsuite>
-  <testsuite name="Operations" timestamp="2021-12-13T02:21:37" tests="0" file="C:\Users\Dell\Diplomado\ProyectoFinal\proyect\test\operations.spec.js" time="0.0000" failures="0">
-  </testsuite>
-  <testsuite name="Test Operations Controller " timestamp="2021-12-13T02:21:37" tests="4" file="C:\Users\Dell\Diplomado\ProyectoFinal\proyect\test\operations.spec.js" time="0.0390" failures="0">
-    <testcase name="Operations Test Operations Controller  Test function Sum" time="0.0250" classname="Test function Sum">
+    <testcase name="express_authentication Should send a 401 if the x-api-key header is not present" time="0.0070" classname="Should send a 401 if the x-api-key header is not present">
     </testcase>
-    <testcase name="Operations Test Operations Controller  Test function Substract" time="0.0060" classname="Test function Substract">
+    <testcase name="express_authentication Should send a 401 if the x-api-key is invalid" time="0.0050" classname="Should send a 401 if the x-api-key is invalid">
     </testcase>
-    <testcase name="Operations Test Operations Controller  Test function multiply" time="0.0040" classname="Test function multiply">
+    <testcase name="express_authentication Should validate header for protected routes" time="0.0140" classname="Should validate header for protected routes">
     </testcase>
-    <testcase name="Operations Test Operations Controller  Test function divide" time="0.0040" classname="Test function divide">
+    <testcase name="express_authentication Should not require auth headers for unprotected routes" time="0.0110" classname="Should not require auth headers for unprotected routes">
     </testcase>
   </testsuite>
-  <testsuite name="payment check" timestamp="2021-12-13T02:21:37" tests="3" file="C:\Users\Dell\Diplomado\ProyectoFinal\proyect\test\payment.spec.js" time="0.5240" failures="1">
-    <testcase name="payment check Should generate an random price" time="0.5170" classname="Should generate an random price">
+  <testsuite name="Operations" timestamp="2021-12-14T05:23:35" tests="0" file="C:\Users\Dell\Diplomado\ProyectoFinal\proyect\test\operations.spec.js" time="0.0000" failures="0">
+  </testsuite>
+  <testsuite name="Test Operations Controller " timestamp="2021-12-14T05:23:35" tests="4" file="C:\Users\Dell\Diplomado\ProyectoFinal\proyect\test\operations.spec.js" time="0.0370" failures="0">
+    <testcase name="Operations Test Operations Controller  Test function Sum" time="0.0220" classname="Test function Sum">
     </testcase>
-    <testcase name="payment check Should generate 5 random prices" time="0.0030" classname="Should generate 5 random prices">
-      <failure message="EPERM: operation not permitted, open &apos;../payment-generated.txt&apos;" type="Error"><![CDATA[Error: EPERM: operation not permitted, open '../payment-generated.txt'
-    at Object.openSync (fs.js:498:3)
-    at Object.create (controllers\payment.controller.js:8:23)
-    at Context.<anonymous> (test\payment.spec.js:53:21)
-    at C:\Users\Dell\Diplomado\ProyectoFinal\proyect\test\payment.spec.js:24:17]]></failure>
+    <testcase name="Operations Test Operations Controller  Test function Substract" time="0.0050" classname="Test function Substract">
     </testcase>
-    <testcase name="payment check Should return 5 promo codes" time="0.0040" classname="Should return 5 promo codes">
+    <testcase name="Operations Test Operations Controller  Test function multiply" time="0.0050" classname="Test function multiply">
+    </testcase>
+    <testcase name="Operations Test Operations Controller  Test function divide" time="0.0050" classname="Test function divide">
     </testcase>
   </testsuite>
-  <testsuite name="Shipment" timestamp="2021-12-13T02:21:38" tests="0" file="C:\Users\Dell\Diplomado\ProyectoFinal\proyect\test\shipment.spec.js" time="0.0000" failures="0">
-  </testsuite>
-  <testsuite name="Test Shipment Controller " timestamp="2021-12-13T02:21:38" tests="2" file="C:\Users\Dell\Diplomado\ProyectoFinal\proyect\test\shipment.spec.js" time="0.0090" failures="0">
-    <testcase name="Shipment Test Shipment Controller  Test Function createShipment" time="0.0040" classname="Test Function createShipment">
+  <testsuite name="payment check" timestamp="2021-12-14T05:23:35" tests="3" file="C:\Users\Dell\Diplomado\ProyectoFinal\proyect\test\payment.spec.js" time="1.0240" failures="0">
+    <testcase name="payment check Should generate an random price" time="0.5060" classname="Should generate an random price">
     </testcase>
-    <testcase name="Shipment Test Shipment Controller  Test Function changeStatus" time="0.0050" classname="Test Function changeStatus">
+    <testcase name="payment check Should generate 5 random prices" time="0.5100" classname="Should generate 5 random prices">
+    </testcase>
+    <testcase name="payment check Should return 5 promo codes" time="0.0080" classname="Should return 5 promo codes">
+    </testcase>
+  </testsuite>
+  <testsuite name="Shipment" timestamp="2021-12-14T05:23:36" tests="0" file="C:\Users\Dell\Diplomado\ProyectoFinal\proyect\test\shipment.spec.js" time="0.0000" failures="0">
+  </testsuite>
+  <testsuite name="Test Shipment Controller " timestamp="2021-12-14T05:23:36" tests="2" file="C:\Users\Dell\Diplomado\ProyectoFinal\proyect\test\shipment.spec.js" time="0.0100" failures="0">
+    <testcase name="Shipment Test Shipment Controller  Test Function createShipment" time="0.0060" classname="Test Function createShipment">
+    </testcase>
+    <testcase name="Shipment Test Shipment Controller  Test Function changeStatus" time="0.0040" classname="Test Function changeStatus">
     </testcase>
   </testsuite>
 </testsuites>
