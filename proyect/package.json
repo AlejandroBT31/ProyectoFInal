@@ -6,6 +6,7 @@
     "start": "node bin/www dotenv -- nodemon -e ts",
     "prestart": "npm install",
     "pretest": "npm install",
+    "oldtest": "node ./node_modules/mocha/bin/_mocha",
     "test": "./node_modules/.bin/mocha test"
   },
   "dependencies": {
