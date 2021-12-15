@@ -28,10 +28,11 @@ describe('express_authentication', () => {
         if (agent) {
             agent.close();
         }
-        utils.clearKeysFile()
-            .then(() => {
-                done();
-            })
+        // utils.clearKeysFile()
+        //     .then(() => {
+        //         done();
+        //     })
+        done();
     });
 
     it('Should generate an API key and add it to file', (done) => {
@@ -144,3 +145,4 @@ describe('express_authentication', () => {
 
     });
 });
+

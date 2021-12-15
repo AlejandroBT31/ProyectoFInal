@@ -6,23 +6,33 @@
     "start": "node bin/www",
     "prestart": "npm install",
     "pretest": "npm install",
-    "test": "./node_modules/.bin/mocha test"
+    "test": "./node_modules/.bin/mocha test",
+    "heroku-run-build-script": "true"
   },
   "dependencies": {
+    "@sentry/node": "^6.16.0",
+    "@sentry/tracing": "^6.16.0",
     "bluebird": "3.7.2",
-    "chai": "4.2.0",
     "chai-http": "4.3.0",
+    "chai": "4.2.0",
+    "connect-datadog": "0.0.9",
     "cookie-parser": "~1.4.4",
     "debug": "~2.6.9",
     "express": "~4.16.1",
     "faker": "^5.5.3",
+    "hot-shots": "^9.0.0",
     "jade": "~1.11.0",
-    "mocha": "7.1.1",
     "mocha-junit-reporter": "1.23.3",
     "mocha-multi-reporters": "1.1.7",
+    "mocha": "7.1.1",
     "morgan": "~1.9.1",
     "shortid": "2.2.15",
     "sinon": "9.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "",
+    "directory": ""
   },
   "devDependencies": {
     "lodash": "4.17.15"
