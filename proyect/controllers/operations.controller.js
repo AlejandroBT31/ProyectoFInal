@@ -17,7 +17,7 @@ module.exports = {
     },
 
     multiply: function (req, res) {
-        dogstatsd.increment('operations.multiplicacion');
+        dogstatsd.increment('operations.multiply');
         const { num1, num2 } = req.params;
         res.json({name: 'Multiplicacion', multiplicacion: parseInt(num1) * parseInt(num2)});
         res.status(201).send();
