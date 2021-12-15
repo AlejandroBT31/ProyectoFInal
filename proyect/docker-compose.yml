@@ -1,9 +1,9 @@
 version: "3.9"
 services:
-  web:
-    container_name: Proyect_v1
+  app:
+    container_name: Proyecto
     build: .
     ports:
       - "5000:5000"
   redis:
-    image: "proyectv1"
+    image: "proyecto"
